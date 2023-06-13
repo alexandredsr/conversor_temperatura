@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    div {
+      background-color: lightblue;
+      display: block;
+      justify-content: center;
+      align-items: center;
+      height: 60vh;
+      max-width: 600px;
+      border-radius: 10px;
+      margin: 100px;
+    }
+
+    h1 {
+      font-size: 30px;
+      padding-top: 80px;
+      color: #333;
+    }
+
+    input[type="number"] {
+      width: 220px;
+      padding: 5px;
+    }
+
+    button {
+      padding: 8px 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+ <div>
+ <div>
+  <h1>Conversor de Temperatura</h1>
+  <label for="celsius">Celsius:</label>
+  <input type="number" id="celsius" placeholder="Digite a temperatura em Celsius">
+  <button onclick="converterTemperatura()">Converter</button>
+  <p id="resultado"></p>
+ </div>
+ </div>
+
+  <script>
+    function converterTemperatura() {
+      var celsius = parseFloat(document.getElementById("celsius").value);
+
+      var fahrenheit = (celsius * 9/5) + 32;
+
+      var kelvin = celsius + 273.15;
+
+      document.getElementById("resultado").innerHTML = "Fahrenheit: " + fahrenheit + "°F<br> Kelvin: " + kelvin + " K";
+    }
+  </script>
+</body>
+</html>
